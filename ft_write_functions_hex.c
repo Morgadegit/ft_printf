@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_write_functions_hexa.c                          :+:      :+:    :+:   */
+/*   ft_write_functions_hex.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sraphard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 18:05:01 by sraphard          #+#    #+#             */
-/*   Updated: 2020/07/16 18:45:12 by sraphard         ###   ########.fr       */
+/*   Updated: 2020/10/30 15:25:18 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void		ft_write_hex(t_outp *conv)
 	if (conv->conversion == 'p')
 	{
 		if (!(value = ft_d_t_h_conv_p(va_arg(conv->args, unsigned long long))))
-			value = ft_strdup("(nil)");
+			value = ft_strdup("0x0");
 		else
 		{
 			while (ft_strlen(value) < conv->prec_width)
